@@ -1,6 +1,6 @@
 import { FormProvider, useForm } from "react-hook-form";
 import Button from "../../components/button/Button";
-import TextBox from "../../components/textbox/TextBox";
+import LoginTextBox from "../../components/textbox/LoginTextBox.tsx";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { createAnimal } from "../../lib/api/animalApi/createAnimal";
@@ -53,8 +53,8 @@ function AnimalCreateForm() {
       <form onSubmit={methods.handleSubmit(onSubmit)} className="pt-24">
         {errorMessage && <p style={{ color: "red" }}>{errorMessage}</p>}
   
-        <TextBox label="Введите имя животного" name="name" />
-        <TextBox label="Введите описание животного" name="description" />
+        <LoginTextBox label="Введите имя животного" name="name" />
+        <LoginTextBox label="Введите описание животного" name="description" />
         <ComboBox options={animalOptions} name="type" />
         <InteractiveMap className="w-1/2" canDraw={true} onCoordinatesChange={handleCoordinatesChange} />
         <FileUpload name="file" control={methods.control} />
