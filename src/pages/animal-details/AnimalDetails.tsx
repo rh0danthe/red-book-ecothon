@@ -3,15 +3,17 @@ import { formatCoordinatesToLatLng } from "../../lib/constants/convertCoordinats
 import { Animal } from "../../lib/models/animal.ts";
 import { Typography } from "../../components/typography/Typography.tsx";
 import AnimalDescriptionList from "../../components/animal-description-list/AnimalDescriptionList.tsx";
+import ReviewList from "../../components/review-slicer/ReviewList.tsx";
 
 interface AnimalDetailsProps {
   animal: Animal
 }
 const AnimalDetails = ({animal} : AnimalDetailsProps) => {
   return (
-    <div className='flex flex-col items-center bg-Beige'>
+    <div className='flex flex-col items-center'>
       <div>
-        <Typography type={'encyclopediaTitle'} color='text-Green'>{animal.name}</Typography>     
+        <Typography type={'encyclopediaTitle'} color='text-Green' className='mt-[80px]'>{animal.name}</Typography>  
+        <Typography type={'p3'} className='mt-[25px] mb-[80px]'>{animal.description}</Typography>
       </div>
       <div className='flex gap-[44px]'>
         <div>
@@ -32,6 +34,7 @@ const AnimalDetails = ({animal} : AnimalDetailsProps) => {
             polygonCoordinates={formatCoordinatesToLatLng(animal.coordinates)}></InteractiveMap>
         </div>
       </div>
+      <ReviewList/>
       <AnimalDescriptionList appearance={animal.appearance} status={animal.status}
                              behavior={animal.behavior} nutrition={animal.nutrition}/>
     </div>

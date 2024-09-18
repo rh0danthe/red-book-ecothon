@@ -1,6 +1,6 @@
 import { FormProvider, useForm } from "react-hook-form";
 import Button from "../../components/button/Button";
-import TextBox from "../../components/textbox/TextBox";
+import LoginTextBox from "../../components/textbox/LoginTextBox.tsx";
 import { useNavigate, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { updateAnimal } from "../../lib/api/animalApi/updateAnimal";
@@ -97,16 +97,16 @@ function AnimalUpdateForm() {
       <form onSubmit={methods.handleSubmit(onSubmit)} className="pt-24">
         {errorMessage && <p style={{ color: "red" }}>{errorMessage}</p>}
         <FileUpload name="file" control={methods.control} />
-        <TextBox
+        <LoginTextBox
           label="Введите имя животного"
           name="name"
           value={animal?.name}
-        ></TextBox>
-        <TextBox
+        ></LoginTextBox>
+        <LoginTextBox
           label="Введите описание животного"
           name="description"
           value={animal?.description}
-        ></TextBox>
+        ></LoginTextBox>
         <ComboBox options={animalOptions} name="type"></ComboBox>
         <InteractiveMap
           className="w-1/2"

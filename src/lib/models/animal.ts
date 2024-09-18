@@ -11,6 +11,7 @@ type Animal = {
     name: string;
     type: keyof typeof Type;
     description: string;
+    reason: string;
     population: string;
     family: string;
     appearance: string;
@@ -24,6 +25,13 @@ type Animal = {
 type AnimalCreate = {
   name: string;
   description: string;
+  reason: string;
+  population: string;
+  family: string;
+  appearance: string;
+  behavior: string;
+  status: string;
+  nutrition: string;
   type: keyof typeof Type;
   coordinates: Coordinates[][];
   image: File;
@@ -32,6 +40,13 @@ type AnimalCreate = {
 type AnimalUpdate = {
   name: string;
   description: string;
+  reason: string;
+  population: string;
+  family: string;
+  appearance: string;
+  behavior: string;
+  status: string;
+  nutrition: string;
   type: keyof typeof Type;
   coordinates: Coordinates[][];
   image: File;

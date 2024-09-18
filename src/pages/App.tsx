@@ -11,6 +11,7 @@ import AnimalCreateForm from "./animal-create/AnimalCreateForm";
 import AnimalUpdateForm from "./animal-update/AnimalUpdateForm";
 import ProtectedRoute from "../lib/wrapper/ProtectedRoute";
 import LoginPage from "./login-form/LoginPage.tsx";
+import RequestsPage from "./request/RequestsPage.tsx";
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
             />
             <Route path="/login" element={<LoginPage/>} />
             <Route path="/*" element={<NotFound />} />
+            <Route path="/requests" element={<RequestsPage/>} />
           </Routes>
         </Layout>
       </Router>

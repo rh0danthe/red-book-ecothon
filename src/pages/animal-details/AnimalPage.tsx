@@ -58,9 +58,9 @@ function AnimalPage() {
       setError("Ошибка при удалении.");
     }
   };
-
+  
   return (
-    <div className="pt-24">
+    <div className="pt-24  bg-Beige">
       {animal ? (
         <AnimalDetails animal={animal}/>
       ) : (

@@ -7,6 +7,12 @@ export const createAnimal = async (animal: AnimalCreate): Promise<Animal> => {
   if (
     !animal.name ||
     !animal.description ||
+    !animal.population ||
+    !animal.family ||
+    !animal.appearance ||
+    !animal.behavior ||
+    !animal.status ||
+    !animal.nutrition ||
     !animal.coordinates ||
     !animal.type ||
     !animal.image
@@ -18,7 +24,14 @@ export const createAnimal = async (animal: AnimalCreate): Promise<Animal> => {
     const formData = new FormData();
     formData.append("name", animal.name);
     formData.append("description", animal.description);
+    formData.append("reason", animal.reason);
     formData.append("type", animal.type);
+    formData.append("population", animal.population);
+    formData.append("family", animal.family);
+    formData.append("appearance", animal.appearance);
+    formData.append("behavior", animal.behavior);
+    formData.append("status", animal.status);
+    formData.append("nutrition", animal.nutrition);
     formData.append("coordinates", JSON.stringify(animal.coordinates));
     formData.append("image", animal.image);
 
