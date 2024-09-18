@@ -21,6 +21,7 @@ export const createAnimal = async (animal: AnimalCreate): Promise<Animal> => {
     formData.append("type", animal.type);
     formData.append("coordinates", JSON.stringify(animal.coordinates));
     formData.append("image", animal.image);
+    formData.append("population", animal.image);
 
     const response = await axios.post<Animal>(`${API_BASE_URL}/animal`, formData, {
       headers: {
