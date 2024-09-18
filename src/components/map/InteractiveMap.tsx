@@ -73,11 +73,6 @@ function InteractiveMap({
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
-      <Marker position={centerCoordinate}>
-        <Popup>
-          A pretty CSS3 popup. <br /> Easily customizable.
-        </Popup>
-      </Marker>
       {polygonCoordinates.length > 0 &&
         polygonCoordinates.map((coordinates, index) => (
           <Polygon
