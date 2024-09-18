@@ -2,8 +2,6 @@ import L from "leaflet";
 import {
   MapContainer,
   TileLayer,
-  Marker,
-  Popup,
   Polygon,
   FeatureGroup,
   Tooltip,
