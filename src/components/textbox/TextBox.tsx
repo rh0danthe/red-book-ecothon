@@ -5,7 +5,7 @@ interface ITextBox {
   label: string;
   name: string;
   value?: string; 
-  type?: string
+  type?: string;
 }
 
 const TextBox = ({ label, name, value, type }: ITextBox) => {

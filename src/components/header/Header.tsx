@@ -29,12 +29,12 @@ function Header({ className }: { className?: string }) {
             <div 
               onMouseEnter={handleMouseEnter} 
               onMouseLeave={handleMouseLeave} 
-              className="bg-transparent h-40 pt-[14px] relative" // Add relative positioning
+              className="bg-transparent h-40 pt-[52px] pl-[44px] relative"
             >
-              <img src={Icon} className="absolute left-16 top-6" />
+              <img src={Icon} className="absolute left-6 top-12" />
               <Button
                 colorBehavior="white"
-                className="w-[202px] h-[52px] font-bold pl-16"
+                className="w-[222px] h-[52px] font-bold pl-16"
                 fontBehaviour="p3"
               >
                 Администратор
@@ -49,18 +49,18 @@ function Header({ className }: { className?: string }) {
             <div 
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
-              className="bg-transparent h-40 pt-[14px] relative" // Add relative positioning
+              className="bg-transparent h-40 pt-[52px] pl-[44px] relative" 
             >
-              <img src={Icon} className="absolute left-16 top-6" />
+              <img src={Icon} className="absolute left-6 top-12" />
               <Button
                 colorBehavior="white"
-                className="w-[182px] h-[52px] font-bold pl-14"
+                className="w-[182px] h-[52px] font-bold pl-16"
                 fontBehaviour="p3"
               >
                 Модератор
               </Button>
               {isVisible && (
-                <div className="absolute top-full left-0 mt-2">
+                <div className="">
                   <OptionList />
                 </div>
               )}
