@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { updateAnimal } from "../../lib/api/animalApi/updateAnimal";
 import { getAnimalById } from "../../lib/api/animalApi/getAnimalById";
 import { Animal } from "../../lib/models/animal";
+
 import ComboBox from "../../components/combobox/Combobox";
 import { animalOptions } from "../../lib/constants/animalOptions";
 import InteractiveMap from "../../components/map/InteractiveMap";
