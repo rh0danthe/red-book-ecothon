@@ -58,7 +58,7 @@ function AnimalCreateForm() {
         <ComboBox options={animalOptions} name="type" />
         <InteractiveMap className="w-1/2" canDraw={true} onCoordinatesChange={handleCoordinatesChange} />
         <FileUpload name="file" control={methods.control} />
-        <Button colorBehavior="purple" type="submit" fontBehaviour="p4">
+        <Button colorBehavior="green" type="submit" fontBehaviour="p4">
           Создать животное
         </Button>
       </form>
