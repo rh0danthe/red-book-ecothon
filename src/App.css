@@ -1,0 +1,17 @@
+
+.leaflet-container{
+  width: 90vw;
+  height: 90vh;
+}
+
+.leaflet-control-attribution{
+  display:none !important;
+}
+
+.dropzone {
+  border: 2px dashed #cccccc;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 4px;
+}
