@@ -10,6 +10,7 @@ type Animal = {
     id: number;
     name: string;
     type: keyof typeof Type;
+    description: string;
     population: string;
     family: string;
     appearance: string;
