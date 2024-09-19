@@ -8,7 +8,7 @@ interface ITextBox {
   type?: string;
 }
 
-const TextBox = ({ label, name, value, type }: ITextBox) => {
+const LoginTextBox = ({ label, name, value, type }: ITextBox) => {
   const { register, setValue } = useFormContext();
 
   useEffect(() => {
@@ -29,4 +29,4 @@ const TextBox = ({ label, name, value, type }: ITextBox) => {
   );
 };
 
-export default TextBox;
+export default LoginTextBox;

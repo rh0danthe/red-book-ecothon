@@ -11,6 +11,14 @@ export const updateAnimal = async (
     const formData = new FormData();
     formData.append("name", animal.name);
     formData.append("description", animal.description);
+    formData.append("reason", animal.reason);
+    formData.append("type", animal.type);
+    formData.append("population", animal.population);
+    formData.append("family", animal.family);
+    formData.append("appearance", animal.appearance);
+    formData.append("behavior", animal.behavior);
+    formData.append("status", animal.status);
+    formData.append("nutrition", animal.nutrition);
     formData.append("type", animal.type);
     formData.append("coordinates", JSON.stringify(animal.coordinates));
     formData.append("image", animal.image);
