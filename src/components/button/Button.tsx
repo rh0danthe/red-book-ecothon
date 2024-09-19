@@ -4,7 +4,7 @@ import { ITypographyTypes, Typography } from '../typography/Typography';
 import { colorClasses } from './styles';
 
 interface IButton extends React.ButtonHTMLAttributes<HTMLButtonElement>{
-  colorBehavior: 'whitetp' | 'white' | 'green' | 'transparent' | 'transparent2' | 'transparentTop';
+  colorBehavior: 'whitetp' | 'white' | 'green' | 'transparent' | 'transparent2' | 'transparentTop'| 'trans';
   fontBehaviour: ITypographyTypes;
   className?: string;
   children?: React.ReactNode;
