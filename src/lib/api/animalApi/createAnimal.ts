@@ -36,7 +36,7 @@ export const createAnimal = async (animal: AnimalCreate): Promise<Animal> => {
     formData.append("image", animal.image);
     formData.append("population", animal.image);
 
-    const response = await axios.post<Animal>(`${API_BASE_URL}/animal`, formData, {
+    const response = await axios.post<Animal>(`${API_BASE_URL}/api/book-element`, formData, {
       headers: {
         'Content-Type': 'multipart/form-data'
       }

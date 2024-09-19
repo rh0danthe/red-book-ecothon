@@ -1,11 +1,8 @@
 import { FormProvider, useForm } from "react-hook-form";
 import Button from "../../components/button/Button";
-import LoginTextBox from "../../components/textbox/LoginTextBox.tsx";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { createAnimal } from "../../lib/api/animalApi/createAnimal";
-import ComboBox from "../../components/combobox/Combobox";
-import { animalOptions } from "../../lib/constants/animalOptions";
 import InteractiveMap from "../../components/map/InteractiveMap";
 import { LatLngTuple } from "leaflet";
 import { formatLatLngToCoordinates } from "../../lib/constants/convertCoordinats";

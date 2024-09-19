@@ -1,5 +1,4 @@
 import { Typography } from "../../typography/Typography";
-import Paws from "/src/assets/paws.svg";
 import Info1 from "/src/assets/welcome-info-img1.png";
 import Info2 from "/src/assets/welcome-info-img2.png";
 import Info3 from "/src/assets/welcome-info-img3.png";

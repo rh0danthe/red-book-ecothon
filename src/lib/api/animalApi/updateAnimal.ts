@@ -24,7 +24,7 @@ export const updateAnimal = async (
     formData.append("image", animal.image);
 
     const response = await axios.patch<Animal>(
-      `${API_BASE_URL}/animal/${id}`,formData, {
+      `${API_BASE_URL}/api/book-element/${id}`,formData, {
       headers: {
         'Content-Type': 'multipart/form-data'
       }

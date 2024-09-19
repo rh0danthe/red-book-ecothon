@@ -10,7 +10,7 @@ export const sendLoginCredentials = async (credentials: LoginCredentials) => {
   }
   try {
     const response = await axios.post<Token>(
-      `${API_BASE_URL}/animal/login`,
+      `${API_BASE_URL}/auth/login`,
       credentials,
     );
     localStorage.setItem("token", response.data.accessToken);
