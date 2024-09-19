@@ -2,8 +2,12 @@ import { useState } from "react";
 import { useAuth } from "../../../lib/context/AuthContext";
 import Button from "../../button/Button";
 import ModerCreateList from "./ModerCreateList";
+import { useNavigate } from "react-router-dom";
 
-function OptionList() {
+interface OptionListProps {
+  onClick: () => void;
+}
+function OptionList({onClick} : OptionListProps) {
   const { isAdmin, logout } = useAuth();
   
   const handleLogout = () => {
@@ -11,6 +15,7 @@ function OptionList() {
   };
 
   const [isVisible, setIsVisible] = useState(false);
+  const navigate = useNavigate();
 
   // Handlers for hover state specifically for "Добавить модератора"
   const handleMouseEnter = () => {
@@ -21,12 +26,17 @@ function OptionList() {
     setIsVisible(false);
   };
 
+  const OnClick = () => {
+    onClick();
+    navigate("./requests");
+  }
+  
   return (
     <div
       className="bg-[#fbfef1] absolute top-28 left-36 rounded-3xl border-2 border-black p-10"
     >
       <div className="flex flex-col items-stretch">
-        <Button colorBehavior="transparentTop" fontBehaviour="p3">
+        <Button onClick={OnClick} colorBehavior="transparentTop" fontBehaviour="p3">
           Обращения
         </Button>
 
