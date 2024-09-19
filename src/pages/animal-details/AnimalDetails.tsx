@@ -3,12 +3,20 @@ import { formatCoordinatesToLatLng } from "../../lib/constants/convertCoordinats
 import { Animal } from "../../lib/models/animal.ts";
 import { Typography } from "../../components/typography/Typography.tsx";
 import AnimalDescriptionList from "../../components/animal-description-list/AnimalDescriptionList.tsx";
-import ReviewList from "../../components/review-slicer/ReviewList.tsx";
+
+import {SimpleSlider} from "../../components/slider/slider";
+import { MyRequest } from "../../lib/models/MyRequest.ts";
 
 interface AnimalDetailsProps {
   animal: Animal
 }
 const AnimalDetails = ({animal} : AnimalDetailsProps) => {
+  const request: MyRequest[] = [
+    {id: 1, text: 'sdfsdfdsfs sdf sdf sdf sdf sd', name: "ivan", img: "https://media.tenor.com/Y71Ht5SlgoQAAAAe/%D1%82%D0%BE%D1%82%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE-%D0%BF%D0%BE%D1%85%D1%83%D0%B9.png", geo: [1233, 1234]},
+    {id: 1, text: 'sdfsdfdsfs sdf sdf sdf sdf sd', name: "ivan", img: "https://media.tenor.com/Y71Ht5SlgoQAAAAe/%D1%82%D0%BE%D1%82%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE-%D0%BF%D0%BE%D1%85%D1%83%D0%B9.png", geo: [1233, 1234]},
+    {id: 1, text: 'sdfsdfdsfs sdf sdf sdf sdf sd', name: "ivan", img: "https://media.tenor.com/Y71Ht5SlgoQAAAAe/%D1%82%D0%BE%D1%82%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE-%D0%BF%D0%BE%D1%85%D1%83%D0%B9.png", geo: [1233, 1234]},
+    {id: 1, text: 'sdfsdfdsfs sdf sdf sdf sdf sd', name: "ivan", img: "https://media.tenor.com/Y71Ht5SlgoQAAAAe/%D1%82%D0%BE%D1%82%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE-%D0%BF%D0%BE%D1%85%D1%83%D0%B9.png", geo: [1233, 1234]},
+  ]
   return (
     <div className='flex flex-col items-center'>
       <div>
@@ -34,9 +42,13 @@ const AnimalDetails = ({animal} : AnimalDetailsProps) => {
             polygonCoordinates={formatCoordinatesToLatLng(animal.coordinates)}></InteractiveMap>
         </div>
       </div>
-      <ReviewList/>
+      <div className='w-[1660px] border-[1px] border-Green rounded-[24px] flex flex-col items-center mt-[102px]'>
+        <Typography type={'h3'} className='mt-[30px] mb-[30px]'>Наши пользователи встречали {animal.name}</Typography>
+        <SimpleSlider requests={request}/>
+        <Typography type={'p1'} className='mb-[24px]'>Тоже видели {animal.name}? Расскажите нам об этом в <a href="" className='hover:underline'>Чат-боте</a></Typography>
+      </div>
       <AnimalDescriptionList appearance={animal.appearance} status={animal.status}
-                             behavior={animal.behavior} nutrition={animal.nutrition}/>
+                             behavior={animal.behavior} nutrition={animal.nutrition} />
     </div>
   );
 };
