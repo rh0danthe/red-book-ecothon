@@ -83,7 +83,7 @@ function AnimalCreateForm() {
               <Button
               colorBehavior="trans"
               fontBehaviour="p3"
-              className="mt-6 w-[311px] absolute top-[200px] right-32"
+              className="mt-6 w-[311px] absolute top-[200px] right-64"
               onClick={() => navigate(`/encyclopedia`)}
             >
               Назад
@@ -91,7 +91,7 @@ function AnimalCreateForm() {
             <Button
               colorBehavior="green"
               fontBehaviour="p3"
-              className="mt-6 w-[311px] absolute top-[280px] right-32"
+              className="mt-6 w-[311px] absolute top-[280px] right-64"
               type="submit"
             >
               Создать

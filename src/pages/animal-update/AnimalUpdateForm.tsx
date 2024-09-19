@@ -104,8 +104,11 @@ function AnimalUpdateForm() {
         },
         animalId,
       );
+      console.log(data.coordinates);
+
       navigate(`/animal/${animalId}`);
     } catch (error) {
+      console.log(data.coordinates);
       setErrorMessage(
         error instanceof Error
           ? error.message
@@ -128,29 +131,32 @@ function AnimalUpdateForm() {
 
   return (
     <FormProvider {...methods}>
-      <form onSubmit={methods.handleSubmit(onSubmit)} className="pt-24 bg-[#fbfef1]">
+      <form
+        onSubmit={methods.handleSubmit(onSubmit)}
+        className="pt-24 bg-[#fbfef1]"
+      >
         {errorMessage && <p style={{ color: "red" }}>{errorMessage}</p>}
         {animal && (
           <div className="flex flex-col items-center justify-center">
             <div>
               <div>
-              <Button
-              colorBehavior="trans"
-              fontBehaviour="p3"
-              className="mt-6 w-[311px] absolute top-[200px] right-32"
-              onClick={() => navigate(`/animal/${animalId}`)}
-            >
-              Отменить
-            </Button>
-            <Button
-              colorBehavior="green"
-              fontBehaviour="p3"
-              className="mt-6 w-[311px] absolute top-[280px] right-32"
-              type="submit"
-            >
-              Сохранить изменения
-            </Button>
-            </div>
+                <Button
+                  colorBehavior="trans"
+                  fontBehaviour="p3"
+                  className="mt-6 w-[311px] absolute top-[200px] right-32"
+                  onClick={() => navigate(`/animal/${animalId}`)}
+                >
+                  Отменить
+                </Button>
+                <Button
+                  colorBehavior="green"
+                  fontBehaviour="p3"
+                  className="mt-6 w-[311px] absolute top-[280px] right-32"
+                  type="submit"
+                >
+                  Сохранить изменения
+                </Button>
+              </div>
 
               <div className="flex items-center justify-center">
                 {isEditing.name ? (
@@ -208,9 +214,13 @@ function AnimalUpdateForm() {
             <div className="flex gap-[44px]">
               <div>
                 <div className="w-[520px] h-[336px] ">
-                <FileUpload name="file" control={methods.control} className="w-full h-full"></FileUpload>
+                  <FileUpload
+                    name="file"
+                    control={methods.control}
+                    className="w-full h-full"
+                  ></FileUpload>
                 </div>
-        
+
                 <div className="grid grid-cols-2 gap-x-4 mt-[30px]">
                   <Typography type={"p3"} className="font-normal p-[10px]">
                     Можно увидеть в:

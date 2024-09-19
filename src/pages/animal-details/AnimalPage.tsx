@@ -61,9 +61,9 @@ function AnimalPage() {
   };
   
   return (
-    <div className="pt-24  bg-Beige min-h-[100vh]">
+    <div className="pt-24 bg-Beige min-h-[100vh]">
       {isLoggedIn && (
-        <div className="absolute right-32 top-[300px] flex flex-row">
+        <div className="absolute right-64 top-[300px] flex flex-row">
           <Button colorBehavior="green" fontBehaviour="p3" className="h-16" onClick={goToUpdateForm}>
             Обновить данные
           </Button>

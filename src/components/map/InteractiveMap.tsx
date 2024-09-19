@@ -54,6 +54,7 @@ function InteractiveMap({
         .map((latLng: any) => [latLng.lat, latLng.lng]);
       if (onCoordinatesChange) {
         onCoordinatesChange([coordinates]);
+        console.log(coordinates);
       }
     }
   };

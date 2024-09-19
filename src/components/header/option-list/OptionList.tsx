@@ -12,7 +12,6 @@ function OptionList() {
 
   const [isVisible, setIsVisible] = useState(false);
 
-  // Handlers for hover state specifically for "Добавить модератора"
   const handleMouseEnter = () => {
     setIsVisible(true);
   };

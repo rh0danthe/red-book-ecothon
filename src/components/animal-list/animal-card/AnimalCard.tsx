@@ -30,7 +30,7 @@ function AnimalCard({ animal, onClick }: IAnimalCard) {
       </div>
       <div className='shadow'>
         {isHovering && <Button onClick={onClick} colorBehavior={'white'}  fontBehaviour={'p4'} 
-                               className='absolute translate-y-[-70px] h-[70px] desktop:w-[370px] laptop:w-[275px]  
+                               className='absolute translate-y-[-70px] h-[70px] desktop:w-[295px] laptop:w-[275px]  
                                border-Green border-[12px]'>Читать далее...</Button>}
       </div>
     </div>

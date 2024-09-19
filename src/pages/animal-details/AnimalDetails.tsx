@@ -16,45 +16,45 @@ const AnimalDetails = ({ animal }: AnimalDetailsProps) => {
       id: 1,
       text: "sdfsdfdsfs sdf sdf sdf sdf sd",
       name: "ivan",
-      img: "https://media.tenor.com/Y71Ht5SlgoQAAAAe/%D1%82%D0%BE%D1%82%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE-%D0%BF%D0%BE%D1%85%D1%83%D0%B9.png",
+      img: "https://www.ecosystema.ru/08nature/birds/026.jpg",
       geo: [1233, 1234],
     },
     {
       id: 1,
       text: "sdfsdfdsfs sdf sdf sdf sdf sd",
       name: "ivan",
-      img: "https://media.tenor.com/Y71Ht5SlgoQAAAAe/%D1%82%D0%BE%D1%82%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE-%D0%BF%D0%BE%D1%85%D1%83%D0%B9.png",
+      img: "https://www.ecosystema.ru/08nature/birds/026.jpg",
       geo: [1233, 1234],
     },
     {
       id: 1,
       text: "sdfsdfdsfs sdf sdf sdf sdf sd",
       name: "ivan",
-      img: "https://media.tenor.com/Y71Ht5SlgoQAAAAe/%D1%82%D0%BE%D1%82%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE-%D0%BF%D0%BE%D1%85%D1%83%D0%B9.png",
+      img: "https://www.ecosystema.ru/08nature/birds/026.jpg",
       geo: [1233, 1234],
     },
     {
       id: 1,
       text: "sdfsdfdsfs sdf sdf sdf sdf sd",
       name: "ivan",
-      img: "https://media.tenor.com/Y71Ht5SlgoQAAAAe/%D1%82%D0%BE%D1%82%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE-%D0%BF%D0%BE%D1%85%D1%83%D0%B9.png",
+      img: "https://www.ecosystema.ru/08nature/birds/026.jpg",
       geo: [1233, 1234],
     },
   ];
   return (
-    <div className="flex flex-col justify-center items-center ">
-      <div>
-        <Typography
-          type={"encyclopediaTitle"}
-          color="text-Green"
-          className="mt-[80px]"
-        >
-          {animal.name}
-        </Typography>
-        <Typography type={"p3"} className="mt-[25px] mb-[80px] text-center">
-          {animal.description}
-        </Typography>
-      </div>
+    <div className="flex flex-col justify-center items-center min-h-screen">
+  <div className="text-center">
+    <Typography
+      type={"encyclopediaTitle"}
+      color="text-Green"
+      className="mt-[80px]"
+    >
+      {animal.name}
+    </Typography> 
+    <Typography type={"p3"} className="mt-[25px] mb-[80px]">
+      {animal.description}
+    </Typography>
+  </div>
       <div className="flex gap-[44px]">
         <div>
           <img
