@@ -15,7 +15,7 @@ type Animal = {
     population: string;
     family: string;
     appearance: string;
-    behavior: string;
+    behaviour: string;
     status: string;
     nutrition: string;
     coordinates: Coordinates[][];

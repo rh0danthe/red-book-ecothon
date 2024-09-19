@@ -54,27 +54,28 @@ function AnimalPage() {
   const handleDeleteAnimal = async () => {
     try {
       await deleteAnimal(animal!.id);
+      navigate(`/encyclopedia`);
     } catch (err) {
       setError("Ошибка при удалении.");
     }
   };
   
   return (
-    <div className="pt-24  bg-Beige">
+    <div className="pt-24  bg-Beige min-h-[100vh]">
+      {isLoggedIn && (
+        <div className="absolute right-32 top-[300px] flex flex-row">
+          <Button colorBehavior="green" fontBehaviour="p3" className="h-16" onClick={goToUpdateForm}>
+            Обновить данные
+          </Button>
+          <Button colorBehavior="green" fontBehaviour="p3" className="h-16 ml-3" onClick={handleDeleteAnimal}>
+            Удалить животное
+          </Button>
+        </div>
+      )}
       {animal ? (
         <AnimalDetails animal={animal}/>
       ) : (
         <p>No animal data available.</p>
-      )}
-      {isLoggedIn && (
-        <div>
-          <Button colorBehavior="green" fontBehaviour="p4" onClick={goToUpdateForm}>
-            Обновить данные
-          </Button>
-          <Button colorBehavior="green" fontBehaviour="p4" onClick={handleDeleteAnimal}>
-            Удалить животное
-          </Button>
-        </div>
       )}
     </div>
   );
