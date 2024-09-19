@@ -26,40 +26,43 @@ function Header({ className }: { className?: string }) {
       >
         {isLoggedIn ? (
           isAdmin ? (
-            <div onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}>
-              <img src={Icon} className="absolute left-16 top-6" />
+            <div 
+              onMouseEnter={handleMouseEnter} 
+              onMouseLeave={handleMouseLeave} 
+              className="bg-transparent h-40 pt-[52px] pl-[44px] relative"
+            >
+              <img src={Icon} className="absolute left-6 top-12" />
               <Button
                 colorBehavior="white"
-                className="w-[182px] h-[52px] font-bold pl-14"
+                className="w-[222px] h-[52px] font-bold pl-16"
                 fontBehaviour="p3"
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}
               >
                 Администратор
               </Button>
               {isVisible && (
                 <div className="">
-                  <OptionList></OptionList>
+                  <OptionList />
                 </div>
               )}
             </div>
           ) : (
             <div 
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave} className="bg-transparent h-20 pt-[14px]">
-              <img src={Icon} className="absolute left-16 top-6" />
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+              className="bg-transparent h-40 pt-[52px] pl-[44px] relative" 
+            >
+              <img src={Icon} className="absolute left-6 top-12" />
               <Button
                 colorBehavior="white"
-                className="w-[182px] h-[52px] font-bold pl-14"
+                className="w-[182px] h-[52px] font-bold pl-16"
                 fontBehaviour="p3"
               >
                 Модератор
               </Button>
               {isVisible && (
                 <div className="">
-                  <OptionList></OptionList>
-                  </div>
+                  <OptionList />
+                </div>
               )}
             </div>
           )
@@ -67,8 +70,8 @@ function Header({ className }: { className?: string }) {
           <Link to="/login">
             <Button
               colorBehavior="white"
-              className="w-[142px] h-[52px]"
-              fontBehaviour="p2"
+              className="w-[142px] h-[52px] font-bold"
+              fontBehaviour="p3"
             >
               Войти
             </Button>
