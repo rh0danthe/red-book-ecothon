@@ -41,7 +41,7 @@ function Header({ className }: { className?: string }) {
               </Button>
               {isVisible && (
                 <div className="">
-                  <OptionList />
+                  <OptionList onClick={handleMouseLeave}/>
                 </div>
               )}
             </div>
@@ -61,7 +61,7 @@ function Header({ className }: { className?: string }) {
               </Button>
               {isVisible && (
                 <div className="">
-                  <OptionList />
+                  <OptionList onClick={handleMouseLeave} />
                 </div>
               )}
             </div>
@@ -79,7 +79,7 @@ function Header({ className }: { className?: string }) {
         )}
 
         <Link to="/">
-          <img src={mainLogo} alt="Main logo" className="h-[55px] pl-44" />
+          <img src={mainLogo} alt="Main logo" className="h-[55px] pl-10" />
         </Link>
 
         <div className="flex flex-row gap-16">
