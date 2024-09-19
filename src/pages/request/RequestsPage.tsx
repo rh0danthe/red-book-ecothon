@@ -4,39 +4,38 @@ import RequestsList from "../../components/requests-list/RequestsList.tsx";
 import "../../assets/welcome-info-img1.png";
 import { MyRequest } from "../../lib/models/MyRequest.ts";
 const RequestsPage = () => {
-  let requests: MyRequest[];
-  requests = [
+  const requests: MyRequest[] = [
     {
       id: 1,
-      name: "Негр1",
-      text: "я вахуи негры вахуи гандоны экотон я вахуи негры вахуи гандоны экотон я вахуи негры вахуи гандоны экотон я вахуи негры вахуи гандоны экото я вахуи негры вахуи гандоны экотон я вахуи негры вахуи гандоны экотон я вахуи негры вахуи гандоны экотон я вахуи негры вахуи гандоны экотон"
-      ,
-      img: "https://media.tenor.com/Y71Ht5SlgoQAAAAe/%D1%82%D0%BE%D1%82%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE-%D0%BF%D0%BE%D1%85%D1%83%D0%B9.png",
-      geo: [313, 133],
+      text: "Заметил дальневосточного леопарда в тайге на Дальнем Востоке. Очень редкий вид, выглядит здоровым, но осторожным. Следует информировать природоохранные органы.",
+      name: "Иван",
+      img: "https://avatars.mds.yandex.net/i?id=3e834c8adec7776aca274fd8f4c9780a_l-10963969-images-thumbs&n=13",
+      geo: [43.1195, 131.8828], // Дальний Восток России
     },
     {
       id: 2,
-      name: "Негр2",
-      text: "я вахуи негры вахуи гандоны экотон",
-      img: "https://media.tenor.com/Y71Ht5SlgoQAAAAe/%D1%82%D0%BE%D1%82%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE-%D0%BF%D0%BE%D1%85%D1%83%D0%B9.png",
-      geo: [313, 133],
+      text: "Обнаружил гнездо белого журавля (стерх) на болоте в Ямало-Ненецком автономном округе. Птицы выглядят хорошо, но необходимо сохранить их место обитания.",
+      name: "Анастасия",
+      img: "https://avatars.mds.yandex.net/i?id=8234a7f1fbf0e3ba3eaa32a7778e6869534eda6ffc1cbde7-4571459-images-thumbs&n=13",
+      geo: [66.5326, 66.6156], // Стерхи в Сибири
     },
     {
       id: 3,
-      name: "Негр3",
-      text: "я вахуи негры вахуи гандоны экотон",
-      img: "https://media.tenor.com/Y71Ht5SlgoQAAAAe/%D1%82%D0%BE%D1%82%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE-%D0%BF%D0%BE%D1%85%D1%83%D0%B9.png",
-      geo: [313, 133],
+      text: "На Камчатке заметил несколько каланов недалеко от побережья. Это удивительное зрелище, учитывая их редкость. Важно сохранять чистоту побережья для их безопасности.",
+      name: "Алексей",
+      img: "https://i.ytimg.com/vi/NnxIlpWuOVw/maxresdefault.jpg",
+      geo: [56.0097, 160.6425], // Камчатка
     },
     {
       id: 4,
-      name: "Негр3",
-      text: "я вахуи негры вахуи гандоны экотон",
-      img: "https://media.tenor.com/Y71Ht5SlgoQAAAAe/%D1%82%D0%BE%D1%82%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE-%D0%BF%D0%BE%D1%85%D1%83%D0%B9.png",
-      geo: [313, 133],
+      text: "Наблюдал амурского тигра возле реки в Приморском крае. Тигр был один, выглядел спокойно, охотился. Природоохранные меры, кажется, приносят плоды.",
+      name: "Ольга",
+      img: "https://mirfauni.cdnbro.com/posts/38118470-amurskii-tigr-na-okhote-3.jpg",
+      geo: [44.1422, 133.2577], // Приморский край
     },
   ];
-  
+
+
   const { isLoggedIn } = useAuth();
   return (
     <div>
